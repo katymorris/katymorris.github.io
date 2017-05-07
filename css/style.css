@@ -1,0 +1,548 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------------FONTS--------------*/
+/*----------------------------------*/
+@font-face {
+    font-family: "Lane";
+    src: url('../fonts/lane.ttf');
+}
+@font-face {
+    font-family: "Tug";
+    src: url('../fonts/Tugano.otf');
+}
+@font-face {
+	font-family: "Gravity-Bold";
+	src: url("../fonts/Gravity-Bold.otf");
+}
+@font-face {
+	font-family: "Gravity-Light";
+	src: url("../fonts/Gravity-Light.otf");
+}
+/*----------------MAIN--------------*/
+/*----------------------------------*/
+body {
+	line-height: 1.5em;
+	font-family: "Lane";
+}
+p {
+	margin-top: 15px;
+}
+a {
+	color: black;
+}
+	a:visited {
+		color: black;
+	}
+.container {
+	width: 1170px;
+	margin: auto;
+}
+.project-bold-text {
+	font-family: "Gravity-Bold";
+}
+.loading-screen {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 5;
+	background-color: white;
+}
+.loading {
+    width: 200px;
+    height: 50px;
+    margin: 150px auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -100px;
+}
+
+.loading span {
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    display: block;
+    background-color: #363636;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.loading span:nth-of-type(1) {
+    animation-name: clockLeft;
+}
+
+.loading span:nth-of-type(2) {
+    left: 20px;
+    animation-name: boom;
+    animation-duration: 1.2s;
+    animation-delay: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.loading span:nth-of-type(3) {
+    left: 40px;
+    animation-name: boom;
+    animation-duration: 1.2s;
+    animation-delay: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.loading span:nth-of-type(4) {
+    left: 60px;
+    animation-name: boom;
+    animation-duration: 1.2s;
+    animation-delay: 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.loading span:last-of-type {
+    left: 80px;
+    animation-name: clockRight;
+    animation-delay: 0.8s;
+}
+
+@keyframes clockLeft {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    25% {
+        transform: rotate(50deg) translate(-80px, 10px);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: rotate(0deg) translate(0, 0);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes clockRight {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    25% {
+        transform: rotate(-50deg) translate(80px, -10px);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: rotate(0deg) translate(0, 0);
+        animation-timing-function: ease-out;
+    }
+}
+.overlay {
+	background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.89;
+    z-index: 2;
+}
+.header-wrapper {
+	overflow: hidden;
+	background-image: url('../images/programming.jpeg');
+	background-repeat: no-repeat;
+	background-size: 200%;
+	animation: panning 50s infinite linear;
+
+	-webkit-box-shadow: 1px 5px 14px -5px rgba(0,0,0,1);
+	-moz-box-shadow: 1px 5px 14px -5px rgba(0,0,0,1);
+	box-shadow: 1px 5px 14px -5px rgba(0,0,0,1);
+}
+	@keyframes panning {
+	  0% {
+	    background-position: 0% 0%;
+	  }
+	  25% {
+	    background-position: 100% 100%;
+	  }
+	   50% {
+	    background-position: 100% 0%;
+	  }
+	  75% {
+	    background-position: 0 100%;
+	  }
+	  200% {
+	    background-position: 0 0;
+	  }
+}
+.left-picture {
+	position: absolute;
+	background-image: url("../images/katy.JPG");
+	height: 100%;
+	width: 28%;
+	left: 0px;
+	top: 0px;
+	background-size: cover;
+	opacity: .9;
+	z-index: 3;
+}
+.header-text {
+	position: absolute;
+	color: white;
+	right: 35px;
+	top: 15px;
+	z-index: 3;
+	text-align: right;
+	line-height: 1.7em;
+}
+.scroll-arrow {
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	margin-left: -25px;
+	margin-top: -20px;
+	border: 2px solid whitesmoke;
+	height: 40px;
+    width: 50px;
+    z-index: 4;
+    cursor: pointer;
+}
+	.arrow-line-container {
+		position: relative;
+	}
+		.arrow-line {
+			position: absolute;
+			width: 2px;
+			height: 30px;
+			background-color: whitesmoke;
+			top: 8px;
+		}
+		.line-1 {
+			left: 16px;
+			transform: rotate(-35deg);
+		}
+		.line-2 {
+			right: 16px;
+			transform: rotate(35deg);
+		}
+.header-image {	
+    width: 100%;
+}
+.main-title, .sub-title {
+	position: absolute;
+	font-family: "Tug";
+	color: white;
+	top: 50%;
+	left: 60%;
+	font-size: 50px;
+	z-index: 3;
+}
+/*	.main-title span, .sub-title span {
+		color: white;
+	}*/
+.main-title {
+	margin-top: -25px;
+	margin-left: -333px;
+}
+.sub-title {
+	margin-top: 45px;
+	margin-left: -333px;
+}
+.main-wrapper {
+	width: 100%;
+}
+.main-container {
+	margin: 0 auto;
+}
+.section-container {
+	text-align: center;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #c7c7c7;
+}
+.section-icon, .section-icon-mobile {
+	margin-top: 100px;
+	color: black;
+	text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
+}
+.section-icon-mobile {
+	display: none !important;
+	text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
+}
+.section-title {
+	font-family: "Tug";
+	margin-top: 30px;
+	margin-bottom: 70px;
+	font-size: 35px;
+	text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
+}
+.product-container {
+	margin: 0 auto;
+	font-family: "Gravity-Light";
+}
+.product-box {
+	position: relative;
+	margin-bottom: 10px;
+	border: 1px solid #c7c7c7;
+	cursor: pointer;
+-webkit-box-shadow: 1px 5px 14px -5px rgba(0,0,0,1);
+-moz-box-shadow: 1px 5px 14px -5px rgba(0,0,0,1);
+box-shadow: 1px 5px 14px -5px rgba(0,0,0,1);
+}
+.product-box-1 {
+	background-image: url("../images/photo-1.jpg");
+	width: 400px;
+	height: 285px;
+}
+.product-box-2 {
+	background-image: url("../images/photo-2.jpg");
+	width: 400px;
+	height: 223px;
+}
+.product-box-3 {
+	background-image: url("../images/photo-3.jpg");
+	width: 400px;
+	height: 224px;
+}
+.product-box-4 {
+	background-image: url("../images/photo-4.jpg");
+	width: 400px;
+	height: 236px;
+}
+.product-box-5 {
+	background-image: url("../images/photo-5.jpg");
+	width: 400px;
+	height: 223px;
+}
+.product-box-6 {
+	background-image: url("../images/photo-6.jpg");
+	width: 400px;
+	height: 222px;
+}
+.product-overlay {
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	z-index: 1;
+	opacity: 0;
+}
+.product-info {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 20px;
+	color: white;
+	opacity: 0;
+	z-index: 2;
+}
+	.project-desc {
+		font-size: 15px;
+	}
+#gh-btn {
+	font-family: "Gravity-Bold";
+	display: inline-block;
+	margin-top: 50px;
+	border: 2px solid #1a1a1a;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+.footer-wrapper {
+	background-color: #1a1a1a;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+/* ---------- RETINA QUERIES ---------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+.left-picture {
+	background-image: url("../images/katy-2x.jpg");
+}
+	
+}
+
+/* ---------- MEDIA QUERIES ---------- */ 
+
+@media (max-width: 1200px) {
+	.container {
+		width: 980px;
+	 }
+	 .main-title, .sub-title {
+	 	left: 70%;
+	 }
+}
+@media (max-width: 980px) {
+  	.container {
+    	width: 768px;
+  	}
+  	.main-title, .sub-title {
+	 	left: 90%;
+	 	top: 60%;
+	 }
+	 .left-picture {
+	 	width: 40%;
+	 }
+	 .header-text {
+	 	width: 300px
+	 }
+
+}
+@media (max-width: 767px) {
+  	.container {
+	    box-sizing: border-box;
+	    width: 100%;
+	    padding: 0 15px;
+ 	}
+ 	.overlay {
+ 		z-index: 3;
+ 		background-color: white;
+ 		opacity: .7;
+ 	}
+ 	.header-wrapper {
+ 		background-size: cover;
+		animation: none;
+ 	}
+ 	.header-text {
+ 		color: black;
+ 		z-index: 4;
+ 		width: 100%;
+ 		font-size: 12px;
+ 		top: 0px;
+ 		right: 0px;
+ 		padding: 15px;
+ 		box-sizing: border-box;
+ 	}
+ 	.scroll-arrow {
+ 		background-color: whitesmoke;
+ 		opacity: .6;
+ 		border: 2px solid black;
+ 		height: 30px;
+    	width: 40px;
+ 	}
+ 	.arrow-line {
+ 		height: 20px;
+ 		background-color: black;
+ 	}
+ 		.line-1 {
+ 			left: 14px;
+ 		}
+ 		.line-2 {
+ 			right: 14px;
+ 		}
+ 	.main-title, .sub-title {
+ 		font-size: 35px;
+ 		left: 50%;
+ 		top: 67%;
+ 		color: black;
+ 	}
+ 	.left-picture {
+ 		width: 100%;
+ 	}
+ 	.main-title {
+ 		margin-left: -145px;
+ 		margin-top: -12px;
+ 	}
+ 	.sub-title {
+ 		margin-left: -145px;
+ 		margin-top: 35px;
+ 	}
+ 	.section-title {
+ 		font-size: 35px;
+ 	}
+ 	.section-icon-mobile {
+		display: inline-block !important;
+	}
+	.section-icon {
+		display: none !important;
+	}
+	.product-box-1 {
+		background-image: url("../images/photo-1-mobile.jpg");
+		width: 300px;
+		height: 214px;
+	}
+	.product-box-2 {
+		background-image: url("../images/photo-2-mobile.jpg");
+		width: 300px;
+		height: 167px;
+	}
+	.product-box-3 {
+		background-image: url("../images/photo-3-mobile.jpg");
+		width: 300px;
+		height: 183px;
+	}
+	.product-box-4 {
+		background-image: url("../images/photo-4-mobile.jpg");
+		width: 300px;
+		height: 177px;
+	}
+	.product-box-5 {
+		background-image: url("../images/photo-5-mobile.jpg");
+		width: 300px;
+		height: 167px;
+	}
+	.product-box-6 {
+		background-image: url("../images/photo-6-mobile.jpg");
+		width: 300px;
+		height: 167px;
+	}
+
+}
+@media (max-width: 480px) {
+	.container {
+		width: 100%;
+	    padding: 0 15px;
+	}
+}
