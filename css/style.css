@@ -227,6 +227,7 @@ a {
 .header-text {
 	position: absolute;
 	color: white;
+	font-family: "Gravity-Bold";
 	right: 35px;
 	top: 15px;
 	z-index: 3;
@@ -311,6 +312,10 @@ a {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
+.section-1 .section-title {
+	padding-bottom: 0px;
+	color: black;
+}
 .product-section {
 	width: 100%;
 }
@@ -329,7 +334,7 @@ a {
 	box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);
 }
 .product-box, .product-description {
-	margin-top: 130px;
+	margin-top: 100px;
 }
 .product-box-1 {
 	background-image: url("../images/photo-1.jpg");
@@ -585,34 +590,34 @@ only screen and (                min-resolution: 2dppx) {
 		width: 767px;
 	 }
 	 .product-box-1 {
-	 	background-size: 400px 216px;
+	 	background-size: 400px 253px;
 		width: 400px;
-		height: 216px;
+		height: 253px;
 	}
 	.product-box-2 {
-		background-size: 400px 180px;
+		background-size: 400px 224px;
 		width: 400px;
-		height: 180px;
+		height: 224px;
 	}
 	.product-box-3 {
-		background-size: 400px 180px;
+		background-size: 400px 224px;
 		width: 400px;
-		height: 180px;
+		height: 224px;
 	}
 	.product-box-4 {
-		background-size: 400px 164px;
+		background-size: 400px 221px;
 		width: 400px;
-		height: 164px;
+		height: 221px;
 	}
 	.product-box-5 {
-		background-size: 400px 180px;
+		background-size: 400px 224px;
 		width: 400px;
-		height: 180px;
+		height: 224px;
 	}
 	.product-box-6 {
-		background-size: 400px 180px;
+		background-size: 400px 224px;
 		width: 400px;
-		height: 180px;
+		height: 224px;
 	}
 	.product-description {
 		width: 46%;
@@ -654,7 +659,7 @@ only screen and (                min-resolution: 2dppx) {
  	.header-text {
  		z-index: 4;
  		width: 100%;
- 		font-size: 12px;
+ 		font-size: 14px;
  		top: 0px;
  		right: 0px;
  		padding: 15px;
@@ -738,33 +743,34 @@ only screen and (                min-resolution: 2dppx) {
 }
 @media (max-width: 480px) {
 	.product-box-1 {
-		background-size: 255px 182px;
-		width: 255px;
-		height: 182px;
+		background-size: 280px 177px;
+		width: 280px;
+		height: 177px;
 	}
 	.product-box-2 {
-		background-size: 255px 142px;
-		width: 255px;
-		height: 142px;
+		background-size: 280px 157px;
+		width: 280px;
+		height: 157px;
 	}
 	.product-box-3 {
-		background-size: 255px 156px;
-		width: 255px;
-		height: 156px;
+		background-size: 255px 157px;
+		width: 280px;
+		height: 157px;
 	}
 	.product-box-4 {
-		background-size: 255px 150px;
-		width: 255px;
-		height: 150px;
+		background-size: 280px 148px;
+		width: 280px;
+		height: 148px;
 	}
 	.product-box-5 {
-		background-size: 255px 142px;
-		width: 255px;
-		height: 142px;
+		background-size: 255px 157px;
+		width: 280px;
+		height: 157px;
 	}
 	.product-box-6 {
-		background-size: 255px 142px;
-		width: 255px;
-		height: 142px;
+		background-size: 255px 157px;
+		width: 280px;
+		height: 157px;
 	}
 }
+
