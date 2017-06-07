@@ -454,6 +454,8 @@ a {
 .section-3-container {
 	background-color: #919191;
 	color: white;
+	font-family: "Gravity-Light";
+	padding-bottom: 50px;
 }
 .skills-container {
 	margin: 0 auto;
