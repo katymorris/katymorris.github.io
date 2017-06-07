@@ -31,9 +31,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+/*ol, ul {
 	list-style: none;
-}
+}*/
 blockquote, q {
 	quotes: none;
 }
@@ -487,6 +487,9 @@ a {
 		font-size: 20px;
 		margin-bottom: 30px;
 	}
+#toolbox-desc ul {
+	text-align: left;
+}
 .back-btn {
 	display: none;
 	opacity: 0;
