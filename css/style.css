@@ -284,6 +284,7 @@ a {
 }
 .main-wrapper {
 	width: 100%;
+	text-align: center;
 }
 .main-container {
 	margin: 0 auto;
@@ -329,37 +330,37 @@ a {
 .product-box-1 {
 	background-image: url("../images/photo-1.jpg");
 	width: 500px;
-	height: 385px;
+	height: 316px;
 	float: left;
 }
 .product-box-2 {
-	background-image: url("../images/photo-2.jpg");
+	background-image: url("../images/photo-5.jpg");
 	width: 500px;
-	height: 323px;
+	height: 280px;
 	float: right;
 }
 .product-box-3 {
 	background-image: url("../images/photo-3.jpg");
 	width: 500px;
-	height: 324px;
+	height: 280px;
 	float: left;
 }
 .product-box-4 {
 	background-image: url("../images/photo-4.jpg");
 	width: 500px;
-	height: 336px;
+	height: 264px;
 	float: right;
 }
 .product-box-5 {
-	background-image: url("../images/photo-5.jpg");
+	background-image: url("../images/photo-6.jpg");
 	width: 500px;
-	height: 323px;
+	height: 280px;
 	float: left;
 }
 .product-box-6 {
-	background-image: url("../images/photo-6.jpg");
+	background-image: url("../images/photo-2.jpg");
 	width: 500px;
-	height: 322px;
+	height: 280px;
 	float: right;
 }
 .product-description {
@@ -368,7 +369,7 @@ a {
 }
 .product-title {
 	font-size: 30px;
-	font-family: "Tug";
+	font-family: "Gravity-Light";
 	margin-bottom: 30px;
 }
 .product-description-right {
@@ -379,6 +380,17 @@ a {
 }
 .product-description-right p, .product-description-left p {
 	text-align: left;
+}
+.github-btn {
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 5px 20px 5px 20px;
+	border: 1px solid #585858;
+	cursor: pointer;
+	background-color: #2a2a2a;
+    color: white;
+    margin-top: 70px;
 }
 .project-link-btn {
 	display: inline-block;
@@ -486,10 +498,30 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
 
-.left-picture {
-	background-image: url("../images/katy-2x.jpg");
-}
-	
+	.product-box-1 {
+		background-image: url("../images/photo-1-2x.jpg");
+		background-size: 500px 316px;
+	}
+	.product-box-2 {
+		background-image: url("../images/photo-5-2x.jpg");
+		background-size: 500px 280px;
+	}
+	.product-box-3 {
+		background-image: url("../images/photo-3-2x.jpg");
+		background-size: 500px 280px;
+	}
+	.product-box-4 {
+		background-image: url("../images/photo-4-2x.jpg");
+		background-size: 500px 264px;
+	}
+	.product-box-5 {
+		background-image: url("../images/photo-6-2x.jpg");
+		background-size: 500px 280px;
+	}
+	.product-box-6 {
+		background-image: url("../images/photo-2-2x.jpg");
+		background-size: 500px 280px;
+	}
 }
 
 /* ---------- MEDIA QUERIES ---------- */ 

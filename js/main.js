@@ -150,6 +150,16 @@ $('body').on('mouseleave', '.back-btn', function() {
 		$(this).stop().transition({"background-color": "transparent", "color": "white", "padding-left": "30px", "padding-right": "30px"}, {duration: 300});
 	}
 });
+$('body').on('mouseenter', '.github-btn', function() {
+	if (windowWidth > 767) {
+		$(this).stop().transition({"background-color": "black", "padding-left": "30px", "padding-right": "30px"}, {duration: 200});
+	}
+});
+$('body').on('mouseleave', '.github-btn', function() {
+	if (windowWidth > 767) {
+		$(this).stop().transition({"background-color": "#2a2a2a", "padding-left": "20px", "padding-right": "20px"}, {duration: 200});
+	}
+});
 
 //skill box clicks
 $('body').on('click', '.skill-box', function() {
@@ -160,6 +170,7 @@ $('body').on('click', '.skill-box', function() {
 		$(".skill-desc-container").css('display', "block");
 		$(skillDesc).css("display", "block").addClass('desc-open');
 		$(skillDesc).stop().transition({"opacity": "1"}, {duration: 300});
+		$('.back-btn').css('display', 'inline-block');
 		$('.back-btn').stop().transition({"opacity": "1"}, {duration: 300});
 		var section2Height = $(skillDesc).outerHeight();
 		var section2h2Height = $('#section-2-container h2').outerHeight();
@@ -172,10 +183,11 @@ $('body').on('click', '.skill-box', function() {
 //skill box clicks
 $('body').on('click', '.back-btn', function() {
 	var openDesc = $('body').find('.desc-open');
+	$('.back-btn').stop().transition({"opacity": "0"}, {duration: 300});
+	$('.back-btn').css('display', 'none');
 	$(openDesc).stop().transition({"opacity": "0"}, {duration: 300, complete: function() {
 		$(this).css("display", "none");
 		$(".skill-desc-container").css('display', "none");
-		$('.back-btn').stop().transition({"opacity": "0"}, {duration: 300});
 		$(".skills-container").css('display', 'block');
 		var skillsContainerHeight = $(".skills-container").height();
 		var sectionContainerMarginBottom = parseInt($("#section-2-container").css('margin-bottom'));
