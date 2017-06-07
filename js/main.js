@@ -75,11 +75,11 @@ function positionProductBoxes() {
 	})
 }
 function adjustSkillsHeight() {
-	if ($('.skill-desc') > 0) {
+	if ($('.desc-open') > 0) {
 		var skillsContainerHeight = $(".skills-container").height();
 		var sectionContainerMarginBottom = parseInt($("#section-2-container").css('margin-bottom'));
 		var section2h2Height = $('#section-2-container h2').outerHeight();
-		$("#section-2-container").animate({"height": skillsContainerHeight + sectionContainerMarginBottom + section2h2Height + 70}, {duration: 500});
+		$("#section-2-container").css({"height": skillsContainerHeight + sectionContainerMarginBottom + section2h2Height + 70}, {duration: 500});
 	}
 }
 /* --------------------- EVENT LISTENERS ---------------------- */
