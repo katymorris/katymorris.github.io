@@ -152,12 +152,12 @@ $('body').on('mouseleave', '.back-btn', function() {
 });
 $('body').on('mouseenter', '.github-btn', function() {
 	if (windowWidth > 767) {
-		$(this).stop().transition({"background-color": "black", "padding-left": "30px", "padding-right": "30px"}, {duration: 200});
+		$(this).stop().transition({"background-color": "white", "color": "black"}, {duration: 200});
 	}
 });
 $('body').on('mouseleave', '.github-btn', function() {
 	if (windowWidth > 767) {
-		$(this).stop().transition({"background-color": "#2a2a2a", "padding-left": "20px", "padding-right": "20px"}, {duration: 200});
+		$(this).stop().transition({"background-color": "transparent", "color": "white"}, {duration: 200});
 	}
 });
 

@@ -57,6 +57,10 @@ table {
     src: url('../fonts/Tugano.otf');
 }
 @font-face {
+	font-family: "Gravity-Regular";
+	src: url("../fonts/Gravity-Regular.otf");
+}
+@font-face {
 	font-family: "Gravity-Bold";
 	src: url("../fonts/Gravity-Bold.otf");
 }
@@ -280,7 +284,7 @@ a {
 }
 .sub-title {
 	margin-top: 32px;
-	margin-left: -225px;
+	margin-left: -171px;
 }
 .main-wrapper {
 	width: 100%;
@@ -382,15 +386,22 @@ a {
 	text-align: left;
 }
 .github-btn {
+	position: absolute;
+	font-size: 20px;
+	font-family: "Gravity-Regular";
 	display: inline-block;
 	margin: 0 auto;
 	margin-top: 20px;
 	padding: 5px 20px 5px 20px;
-	border: 1px solid #585858;
+	border: 2px solid white;
+	color: white;
 	cursor: pointer;
-	background-color: #2a2a2a;
-    color: white;
+	background-color: transparent;
     margin-top: 70px;
+    top: 60%;
+    left: 50%;
+    margin-left: -92px;
+    z-index: 3;
 }
 .project-link-btn {
 	display: inline-block;
@@ -533,28 +544,34 @@ only screen and (                min-resolution: 2dppx) {
 		width: 980px;
 	}
 	 .product-box-1 {
-		width: 400px;
-		height: 285px;
+	 	background-size: 450px 266px;
+		width: 450px;
+		height: 266px;
 	}
 	.product-box-2 {
-		width: 400px;
-		height: 223px;
+		background-size: 400px 230px;
+		width: 450px;
+		height: 230px;
 	}
 	.product-box-3 {
-		width: 400px;
-		height: 224px;
+		background-size: 400px 230px;
+		width: 450px;
+		height: 230px;
 	}
 	.product-box-4 {
+		background-size: 400px 214px;
 		width: 400px;
-		height: 236px;
+		height: 214px;
 	}
 	.product-box-5 {
-		width: 400px;
-		height: 223px;
+		background-size: 400px 230px;
+		width: 450px;
+		height: 230px;
 	}
 	.product-box-6 {
-		width: 400px;
-		height: 222px;
+		background-size: 400px 230px;
+		width: 450px;
+		height: 230px;
 	}
 	.product-title {
 		font-size: 25px;
@@ -567,32 +584,35 @@ only screen and (                min-resolution: 2dppx) {
 	.container {
 		width: 767px;
 	 }
-	.product-box-1 {
+	 .product-box-1 {
+	 	background-size: 400px 216px;
 		width: 400px;
-		height: 285px;
+		height: 216px;
 	}
 	.product-box-2 {
+		background-size: 400px 180px;
 		width: 400px;
-		height: 223px;
+		height: 180px;
 	}
 	.product-box-3 {
+		background-size: 400px 180px;
 		width: 400px;
-		height: 224px;
+		height: 180px;
 	}
 	.product-box-4 {
+		background-size: 400px 164px;
 		width: 400px;
-		height: 236px;
+		height: 164px;
 	}
 	.product-box-5 {
+		background-size: 400px 180px;
 		width: 400px;
-		height: 223px;
+		height: 180px;
 	}
 	.product-box-6 {
+		background-size: 400px 180px;
 		width: 400px;
-		height: 222px;
-	}
-	.product-title {
-		font-size: 23px;
+		height: 180px;
 	}
 	.product-description {
 		width: 46%;
@@ -668,11 +688,15 @@ only screen and (                min-resolution: 2dppx) {
  		margin-top: -12px;
  	}
  	.sub-title {
- 		margin-left: -121px;
+ 		margin-left: -92px;
  		margin-top: 35px;
  	}
  	.section-title {
  		font-size: 35px;
+ 	}
+ 	.github-btn {
+ 		font-size: 15px;
+ 		margin-left: -74px;
  	}
  	.section-color .product-description, .section-default .product-description {
  		margin-top: 50px;
