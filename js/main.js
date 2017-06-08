@@ -86,18 +86,18 @@ function adjustSkillsHeight() {
 /* ------------------------------------------------------------ */
 
 // scroll arrow hover
-$('body').on('mouseenter', ".scroll-arrow", function() {
-	if ($(window).width() > 767) {
-    	$(this).stop().transition({'background-color': "whitesmoke"}, {duration: 300});
-    	$(this).children().children('.arrow-line').stop().transition({"background-color": "#48280b"})
-	}
-});
-$('body').on('mouseleave', ".scroll-arrow", function() {
-	if ($(window).width() > 767) {
-		$(this).stop().transition({'background-color': "transparent", "border-radius": "initial"}, {duration: 300});
-		$(this).children().children('.arrow-line').stop().transition({"background-color": "whitesmoke"})	
-	}
-});
+// $('body').on('mouseenter', ".scroll-arrow", function() {
+// 	if ($(window).width() > 767) {
+//     	$(this).stop().transition({'background-color': "whitesmoke"}, {duration: 300});
+//     	$(this).children().children('.arrow-line').stop().transition({"background-color": "#48280b"})
+// 	}
+// });
+// $('body').on('mouseleave', ".scroll-arrow", function() {
+// 	if ($(window).width() > 767) {
+// 		$(this).stop().transition({'background-color': "transparent", "border-radius": "initial"}, {duration: 300});
+// 		$(this).children().children('.arrow-line').stop().transition({"background-color": "whitesmoke"})	
+// 	}
+// });
 
 //visit project button 
 $('body').on('mouseenter', ".project-link-btn ", function() {
@@ -111,24 +111,23 @@ $('body').on('mouseleave', ".project-link-btn ", function() {
 	}
 });
 
-// $("a").on('click', function(event) {
-// 	debugger
-//   // Make sure this.hash has a value before overriding default behavior
-//   if (this.hash !== "") {
-//     // Prevent default anchor click behavior
-//     event.preventDefault();
+$("a").on('click', function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    event.preventDefault();
 
-//     // Store hash
-//     var hash = this.hash;
+    // Store hash
+    var hash = this.hash;
 
-//     // Using jQuery's animate() method to add smooth page scroll
-//     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-//     $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){
-//       // Add hash (#) to URL when done scrolling (default click behavior)
-//       window.location.hash = hash;
-//     });
-//   } // End if
-// });
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  } // End if
+});
 
  //skill box hovers
 $('body').on('mouseenter', '.skill-box', function() {
