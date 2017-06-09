@@ -365,11 +365,16 @@ a {
 	float: right;
 }
 .product-box-3 {
-	background-image: url("../images/photo-3.jpg");
+/*	background-image: url("../images/photo-3.jpg");*/
+	background-color: darkgray;
+	color: white;
 	width: 500px;
 	height: 280px;
 	float: left;
 }
+	.product-box-3 p {
+		margin-top: 125px;
+	}
 .product-box-4 {
 	background-image: url("../images/photo-4.jpg");
 	width: 500px;
@@ -544,7 +549,7 @@ only screen and (                min-resolution: 2dppx) {
 		background-size: 500px 280px;
 	}
 	.product-box-3 {
-		background-image: url("../images/photo-3-2x.jpg");
+/*		background-image: url("../images/photo-3-2x.jpg");*/
 		background-size: 500px 280px;
 	}
 	.product-box-4 {
