@@ -188,6 +188,23 @@ a {
         animation-timing-function: ease-out;
     }
 }
+.nav-bar-container {
+	position: fixed;
+	right: 0px;
+	z-index: 7;
+	background-color: rgba(255, 255, 255, .8);
+
+}
+	.nav-bar-container ul li {
+		text-decoration: none;
+		display: inline-block;
+		padding: 20px;
+		padding-right: 5px;
+		cursor: pointer;
+	}
+		.nav-bar-container ul li:last-child {
+			padding-right: 30px;
+		}
 .overlay {
 	background-color: black;
     position: absolute;
@@ -201,7 +218,7 @@ a {
 	background-image: url('../images/programming.jpeg');
 	background-repeat: no-repeat;
 	background-size: 200%;
-	animation: panning 50s infinite linear;
+	animation: panning 300s infinite linear;
 
 	-webkit-box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);
 	-moz-box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);
@@ -328,9 +345,9 @@ a {
 	margin-right: 10px;
 	border: 1px solid #c7c7c7;
 	cursor: pointer;
-	-webkit-box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);
+/*	-webkit-box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);
 	-moz-box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);
-	box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);
+	box-shadow: 0px 2px 5px 0px rgba(135,135,135,1);*/
 }
 .product-box, .product-description {
 	margin-top: 100px;
