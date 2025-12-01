@@ -93,6 +93,10 @@ section h2 {
     line-height: 1.8;
 }
 
+.about-content p {
+    margin-bottom: 20px;
+}
+
 .blog-posts {
     margin-top: 40px;
 }

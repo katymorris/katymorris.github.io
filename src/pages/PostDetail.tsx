@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import type { BlogPost } from '../types';
-import { loadPost } from '../utils/postUtils';
+import { loadAllPosts } from '../utils/postUtils';
 import { formatDate } from '../utils/dateUtils';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -23,9 +23,14 @@ function PostDetail() {
 
       try {
         setLoading(true);
-        const loadedPost = await loadPost(`${id}.json`);
-        setPost(loadedPost);
-        setError(null);
+        const allPosts = await loadAllPosts();
+        const foundPost = allPosts.find(p => p.id === id);
+        if (foundPost) {
+          setPost(foundPost);
+          setError(null);
+        } else {
+          setError(`Post with ID "${id}" not found`);
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load post');
       } finally {

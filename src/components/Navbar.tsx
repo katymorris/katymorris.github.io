@@ -4,6 +4,7 @@ function Navbar() {
   const location = useLocation();
   const isHome = location.pathname === '/' || location.pathname.startsWith('/post/');
   const isProjects = location.pathname === '/projects';
+  const isAbout = location.pathname === '/about';
 
   return (
     <nav className="navbar">
@@ -17,7 +18,13 @@ function Navbar() {
         to="/projects" 
         className={`nav-link ${isProjects ? 'active' : ''}`}
       >
-        Projects
+        Work & Projects
+      </Link>
+      <Link 
+        to="/about" 
+        className={`nav-link ${isAbout ? 'active' : ''}`}
+      >
+        About
       </Link>
     </nav>
   );

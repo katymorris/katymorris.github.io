@@ -34,7 +34,7 @@ function Projects() {
       <Navbar />
       <main>
         <section>
-          <h2>Projects</h2>
+          <h2>Work & Projects</h2>
           {loading && <p className="loading">Loading projects...</p>}
           {error && <p className="error">Error loading projects: {error}</p>}
           {!loading && !error && projects.length === 0 && (

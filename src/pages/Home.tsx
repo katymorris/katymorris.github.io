@@ -12,7 +12,7 @@ function Home() {
       <main>
         <About />
         <section className="blog-posts">
-          <h2>Blog Posts</h2>
+          <h2>Posts</h2>
           <BlogPosts />
         </section>
       </main>
